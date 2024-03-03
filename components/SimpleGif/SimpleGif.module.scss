@@ -1,0 +1,35 @@
+@import "./../../styles/variable.scss";
+.gifsMain {
+  width: 300px;
+}
+.gifsContainer {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $goldenish;
+  color: $teak-black;
+  text-align: center;
+  margin: 0 10px;
+
+  .gifsBanner {
+    width: 100%;
+    height: 100%;
+    background-color: $goldenish;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      height: 150px;
+      width: 150px;
+    }
+  }
+}
+
+.contentDetails {
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+}

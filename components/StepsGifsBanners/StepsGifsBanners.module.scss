@@ -1,0 +1,30 @@
+.contentClass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.gifMain {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(300px, min-content));
+  grid-gap: 20px;
+  place-content: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .gifMain {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, min-content));
+    grid-gap: 20px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .gifMain {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(300px, min-content));
+    grid-gap: 20px;
+  }
+}

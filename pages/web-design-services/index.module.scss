@@ -1,0 +1,32 @@
+.widthUnset {
+  width: unset !important;
+}
+
+.childButtons {
+  margin-top: 50px;
+}
+.web_design_wrapper {
+  .overlay {
+    background: red;
+  }
+  .btn_group_contact {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px 0 0 0;
+
+    button {
+      margin: 10px 0 0 0;
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .widthUnset {
+    width: 100% !important;
+  }
+  .web_design_wrapper {
+    .btn_group_contact {
+      margin-top: 20px;
+    }
+  }
+}

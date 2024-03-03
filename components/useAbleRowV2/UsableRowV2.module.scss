@@ -1,0 +1,24 @@
+.iAmUseableRow {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  .content {
+    flex: 1;
+    min-width: 300px;
+    margin: 0 20px;
+  }
+  .wrapperImage {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.makeItRevese {
+  flex-direction: row-reverse;
+}

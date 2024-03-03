@@ -1,0 +1,44 @@
+.slider_wrapper {
+  padding: 30px 0 30px 0;
+ 
+  width: 100%;
+  .flex_item {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    .left {
+      min-width: 500px;
+      flex: 2;
+      overflow: hidden;
+      img {
+        border-radius: 10px;
+      }
+    }
+
+    .right {
+      flex: 1;
+      min-width: 300px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+    .slider_wrapper {
+        padding: 30px 0 ;
+        .flex_item {
+          .left {
+            padding-right: 40px;
+            min-width: 100%;
+            padding-right: 40px;
+          }
+          .right {
+            flex: 1;
+            min-width: 100%;
+          }
+        }
+      }
+
+    
+}

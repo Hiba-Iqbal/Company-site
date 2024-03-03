@@ -1,0 +1,53 @@
+@import "./../../styles/variable.scss";
+.background {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  // background-color: rgba(0, 0, 0, 0.7);
+  // background-color: rgba(148, 97, 97, 0.7);
+  font-size: 62.5%;
+  z-index: 1000;
+}
+
+.contentDiv {
+  display: flex;
+  margin-top: 30px;
+  height: 50px;
+  background: red;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  .contentDetails {
+    font-size : 16px;
+    color : white;
+    padding : 0 10px;
+  }
+}
+
+.success {
+  background: #4BB543;
+}
+.errro {
+  background: $redish;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.paper {
+  width: 400px;
+  height: 400px;
+  padding: 2em;
+  background-color: white;
+}
+
+@media only screen and (max-width: 1100px) {
+  .background {
+    font-size: 50%;
+  }
+}

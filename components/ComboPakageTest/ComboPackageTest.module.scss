@@ -1,0 +1,148 @@
+@import "../../styles/variable.scss";
+
+.packages_wrapper {
+  width: 100%;
+  max-width: 1200px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: auto;
+  position: relative;
+  box-shadow: 0 0 10px #d4d4d4;
+
+  .packages_items {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    img{
+      position:absolute;
+      right:-30px;
+      top:-30px;
+    }
+
+    &:nth-child(2) {
+      background-color: #f9f9f9;
+      padding: 10px 0;
+    }
+    &:nth-child(3) {
+      padding: 10px 0;
+
+      .inner_items {
+        display: flex;
+        margin-top: -10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        
+        .package_list {
+          margin-bottom: 50px;
+        p {
+          margin-bottom: 0 !important;
+        }
+        .list_items {
+          display: flex;
+          align-items: center;
+          margin: 10px 0;
+      
+          .check_icon {
+            margin: 0 10px 0 0;
+          }
+        }
+      }
+        button,
+        a {
+          width: 100%;
+          max-width: 300px;
+          margin: 0 10px;
+          margin-top: 10px;
+        }
+        a {
+          color: $dark;
+          border: solid 1px $dark;
+
+          padding: 8px 0;
+          border-radius: 10px;
+          text-align: center;
+        }
+      }
+    }
+    .show_price {
+      width: 100%;
+      position: relative;
+      .tag {
+        position: absolute;
+        right: 0;
+        top: -5px;
+        font-weight: bold;
+      }
+      h1 {
+        width: max-content;
+        margin-left: auto;
+      }
+    }
+    .centralize_txt {
+      div {
+        text-align: center;
+      }
+    }
+    .header_items {
+      flex: 1;
+      padding: 20px 0;
+    }
+
+    .inner_items {
+      flex: 1;
+      min-width: 300px;
+      border-right: solid 1px rgba($color: $dark, $alpha: 0.2);
+      padding: 30px;
+
+      &:last-child {
+        border-right: unset;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .packages_wrapper {
+    height: fit-content;
+
+    .packages_items {
+
+      img{
+        height:100px;
+        width:100px;
+        right:-20px;
+        top:-40px;
+      }
+
+      .header_items {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: unset;
+        margin: 0 0 20px 0;
+
+        div {
+          h3,
+          h2 {
+            margin-bottom: 0 !important;
+          }
+        }
+      }
+      .inner_items {
+        min-height: fit-content;
+        margin: 0 0 10px;
+
+        div {
+          h1,
+          h3 {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.showDetailsWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0 30px;
+  .showDetails {
+    .showDetailsImage {
+      img {
+        border-radius: 16px;
+        width: 100%;
+        margin: 0 0 40px 0;
+      }
+    }
+  }
+  .text_area {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0;
+    textarea {
+      outline: navajowhite;
+      box-shadow: 0 0 10px #d4d4d4;
+      border-radius: 8px;
+      padding: 10px;
+      margin: 8px 0 0 0;
+      width: 100%;
+      min-height: 200px;
+      resize: none;
+    }
+  }
+}

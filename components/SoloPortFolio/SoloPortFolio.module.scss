@@ -1,0 +1,33 @@
+@import "../../styles/variable.scss";
+.soloPortfolio {
+  background: $dark;
+  width: 100%;
+  .mainSection {
+    text-align: center;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+      .imgContainer {
+        height: 100%;
+        max-height: 190px;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .soloPortfolio {
+    .mainSection {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+        .imgContainer {
+          max-height: 150px;
+        }
+      }
+    }
+  }
+}

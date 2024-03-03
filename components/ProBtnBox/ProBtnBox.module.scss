@@ -1,0 +1,68 @@
+@import "./../../styles/variable.scss";
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cursorDisabled {
+  cursor: not-allowed !important;
+}
+.BtnWrapper {
+  margin-bottom: 30px;
+  margin-right: 30px;
+  display: grid;
+  // justify-content: space-between;
+  grid-template-columns: 1fr minmax(max-content, 1fr);
+  width: 100%;
+  button {
+    cursor: pointer;
+    padding: 0 10px;
+    div {
+      color: white;
+      padding: 0px;
+      margin: 0px;
+      font-size: 26px;
+    }
+  }
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    .tooltiptext {
+      visibility: hidden;
+      width: 100%;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+
+      /* Position the tooltip */
+      position: absolute;
+      z-index: 1;
+    }
+    &:hover {
+      .tooltiptext {
+        visibility: visible;
+      }
+    }
+  }
+  .labelWrapper {
+    padding: 0 14px;
+    justify-self: flex-start;
+    cursor: pointer;
+  }
+  .actionsWrapper {
+    border-radius: 4px;
+    justify-self: flex-end;
+    .actionBtn {
+      padding: 0 10px;
+      background-color: $dark;
+      border-radius: 6px;
+    }
+    label {
+      font-size: 24px;
+      padding: 0px;
+      margin: 0 10px 10px 10px;
+    }
+  }
+}

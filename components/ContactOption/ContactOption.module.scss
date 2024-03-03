@@ -1,0 +1,88 @@
+@import "../../styles/variable.scss";
+.contact_option_wrapper {
+
+ 
+}
+.contact_option_call_us {
+
+ 
+}
+.contact_option_contact_us {
+  position: fixed;
+  right: -52px;
+  top: 352px;
+  z-index: 111;
+  overflow: hidden;
+  background-color: $light-gray;
+  padding: 12px;
+  transform: rotate(-90deg);
+  border-radius: 10px 10px 0 0;
+
+  a {
+    color: $clr-white;
+  }
+}
+
+.text_us {
+  position: fixed;
+  right: 0;
+  top: 200px;
+  z-index: 111;
+  background-color: $secondary-color;
+  padding: 8px;
+  border-radius: 30px 0 0 30px;
+  transform: translateX(82px);
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateX(0);
+  }
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  a {
+    margin: 0;
+    color: #fff;
+  }
+
+  svg {
+    color: #fff;
+    font-size: 30px;
+    margin-right: 10px;
+  }
+}
+.call_us {
+  position: fixed;
+  right: 0;
+  top: 250px;
+  z-index: 111;
+  background-color: $secondary-color;
+  padding: 8px;
+  border-radius: 30px 0 0 30px;
+  transform: translateX(138px);
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateX(0);
+  }
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    margin: 0;
+    color: #fff;
+  }
+
+  svg {
+    color: #fff;
+    font-size: 30px;
+    margin-right: 10px;
+  }
+}

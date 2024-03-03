@@ -1,0 +1,118 @@
+@import "../../styles/variable.scss";
+
+.get_a_quot_wrapper {
+  .form_wrapper {
+    padding: 20px;
+    border-radius: 10px;
+    background: $dark; // image will be here 
+    background-size: cover;
+    padding: 10px;
+
+    .form_row {
+      display: flex;
+      flex-wrap: wrap;
+      .flex_cols {
+        flex: 1;
+        margin: 10px;
+        min-width: 250px;
+        position: relative;
+
+        textarea {
+          width: 100%;
+          resize: none;
+          padding: 10px;
+          // min-height: 300px;
+
+          &:focus {
+            outline: $light-gray;
+          }
+          &::placeholder {
+            color: $dark;
+          }
+        }
+
+        input[radio] {
+          color: #fff;
+        }
+
+        input {
+          width: 100%;
+          padding: 18px 10px;
+          border-radius: 6px;
+           font-size: 14px;
+
+          &:focus {
+            outline: $light-gray;
+          }
+          &::placeholder {
+            color: $dark;
+            font-size: 14px;
+          }
+        }
+
+        &.button_styles {
+          display: flex;
+          justify-content: flex-end;
+        }
+        // &.select_typed {
+        //   position: relative;
+
+        //   input {
+        //     cursor: pointer;
+        //     caret-color: transparent;
+        //   }
+
+        //   svg {
+        //     color: $light-gray;
+        //     position: absolute;
+        //     right: 10px;
+        //     top: 10px;
+        //     z-index: 1;
+        //     font-size: 28px;
+        //     cursor: pointer;
+        //   }
+        // }
+
+        &.select_typed  {
+          
+        }
+
+        &.checkbox_typed {
+          display: flex;
+          position: relative;
+          align-items: center;
+
+          input[type="checkbox"] {
+            width: max-content;
+            margin-right: 10px;
+            transform: scale(1.5);
+          }
+          label {
+            color: #fff;
+          }
+        }
+
+        button {
+          margin-left: auto;
+        }
+      }
+    }
+    &.bg_light {
+      background-color: transparent;
+      .form_row {
+        .flex_cols {
+          label {
+            color: #000;
+          }
+          input,textarea {
+            box-shadow: 0 0 10px #d4d4d4;
+          }
+          textarea {
+            border-radius: 10px;          }
+        }
+      }
+    }
+  }
+
+  // antd-input-stylings -__-
+}

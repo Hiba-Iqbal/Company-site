@@ -1,0 +1,60 @@
+@import "./../../styles/variable.scss";
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.contact_card {
+  padding: 25px 30px;
+  background-color: $bg-color-aqua;
+  display: flex;
+  flex: 1;
+  min-width: 300px;
+  margin: 10px 10px 0 10px;
+  transition: .5s;
+  .logo {
+    svg {
+      font-size: 40px;
+      object-fit: contain;
+    }
+    .email {
+      color: #bd10e0;
+      transition: .5s;
+    }
+    .phone {
+      color: #ff8a73;
+      transition: .5s;
+    }
+    .location {
+      color: #95b0ff;
+      transition: .5s;
+    }
+  }
+  .description {
+    margin-left: 20px;
+    .title {
+      margin-bottom: 10px;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.04);
+    .email,.phone,.location {
+      transform: scale(1.5) rotateY(190deg);
+    }
+  }
+}
+
+
+@media screen and (max-width:540px) {
+
+  .contact_card {
+    padding: 10px;
+
+    .description {
+      margin-left: 10px;
+    }
+  }
+  
+}

@@ -1,0 +1,82 @@
+@import "../../styles/variable.scss";
+.buttonContainer {
+  outline: none;
+  background: #272a3d;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+  border-radius: 25px;
+  border: solid 1px #FDB827;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  p {
+    margin: 0;
+  }
+}
+
+.hover_light {
+  &:hover {
+    background-color: $dark !important;
+    p {
+      color: $clr_white !important;
+    }
+  }
+}
+.hover {
+  &:hover {
+    background-color: $clr_white !important;
+    border: solid 1px $dark !important;
+    p {
+      color: $dark !important;
+    }
+    .socialIconsWrapper {
+      border: solid 1px $dark !important;
+      .social_icons {
+        color: $dark !important;
+        transform: rotate(120deg);
+      }
+    }
+  }
+}
+
+.buttonContainer:active {
+  transform: scale(0.9);
+}
+
+.socialIconsWrapper {
+  border: 1px solid #FDB827;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .social_icons {
+    transition: transform 0.25s ease-in;
+  }
+  .social_icons:hover {
+    transform: rotate(120deg);
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .para {
+    font-size: 16px !important;
+  }
+  .socialIconsWrapper {
+    height: 25px;
+    width: 25px;
+    .social_icons {
+      transition: transform 0.25s ease-in;
+      // font-size: 2px !important;
+      width: 20px !important;
+      transform: scale(0.8);
+
+    }
+    .social_icons:hover {
+      transform: rotate(120deg);
+    }
+  }
+}
+  

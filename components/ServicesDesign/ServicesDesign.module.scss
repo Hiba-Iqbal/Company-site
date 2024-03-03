@@ -1,0 +1,73 @@
+@import "../../styles/variable.scss";
+.back {
+  background: $dark;
+  //   height: 250px;
+  .services {
+    display: grid;
+    grid-template-columns: 60fr 40fr;
+    grid-gap: 20;
+    // margin-top: 40px;
+    .imgContainer {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: movement infinite 15s;
+      img {
+        position: absolute;
+        max-width: 350px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .back {
+    .services {
+      .imgContainer {
+        justify-content: center;
+        img {
+          max-width: 324px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .back {
+    .services {
+      grid-template-columns: 100fr;
+      .content {
+        text-align: center;
+      }
+      .imgContainer {
+        justify-content: center;
+        padding-top: 30px;
+        img {
+          position: unset;
+          width: 100%;
+          max-width: unset;
+        }
+      }
+    }
+  }
+}
+
+@keyframes movement {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  70% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

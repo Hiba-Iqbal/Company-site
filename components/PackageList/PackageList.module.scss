@@ -1,0 +1,39 @@
+@import "./../../styles/variable.scss";
+
+.package_list {
+  margin-bottom: 50px;
+  p {
+    margin-bottom: 0 !important;
+    cursor: pointer;
+    transition: all 200ms ease-out;
+
+    &:hover {
+      color: $redish !important;
+    }
+  }
+  .list_items {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+
+    .check_icon {
+      margin: 0 10px 0 0;
+    }
+  }
+
+}
+
+@media screen and (max-width:540px) {
+
+  .package_list{
+    .list_items{
+      margin:10px 0 0 0;
+    }
+  }
+  
+  .remove_spacing_y {
+    margin-bottom: 0;
+  }
+  
+}
+

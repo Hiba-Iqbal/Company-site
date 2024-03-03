@@ -1,0 +1,131 @@
+@import "../../styles/variable";
+.mainBanner {
+  position: relative;
+  background: url(../../assets/images/sample/bgWebDesign.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  .sectionClass {
+    
+    background-size: cover;
+  }
+  .logo {
+    width: 250px;
+  }
+  .IAmHome {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 30px 0px;
+    .content {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+
+      .borderHeading {
+        border-bottom: 2px solid $clr-white;
+        padding-bottom: 10px;
+        font-size: 35px;
+      }
+    }
+    .formPanel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .formBackColor {
+        background: #f1f1f1;
+        border-radius: 15px;
+        padding: 0px 20px 20px;
+        text-align: center;
+        width: 365px;
+        position: relative;
+        .formHeading {
+          h1 {
+            color: black;
+            font-weight: 400;
+            background: $clr-white;
+            padding: 15px;
+            margin: 0px -20px 10px;
+            border-radius: 15px 15px 0 0;
+          }
+        }
+        .OfferTime {
+          background: $dark;
+          position: absolute;
+          top: 143px;
+          right: -120px;
+          transform: rotate(90deg);
+          padding: 10px 30px;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+        }
+      }
+    }
+  }
+}
+
+// medai query fro iPad width 991px
+
+@media screen and (max-width: 991px) {
+  .mainBanner {
+    .logo {
+      margin-top: 60px;
+    }
+    .sectionClass {
+      height: 100%;
+      background-size: "cover";
+      margin-bottom: 25px;
+    }
+    .logoPosition {
+      position: unset !important;
+    }
+    .IAmHome {
+      display: flex;
+      align-items: center;
+      flex-direction: column-reverse;
+      .content {
+        margin-top: 30px;
+        .borderHeading {
+          font-size: 30px;
+        }
+      }
+      .formPanel {
+        .formBackColor {
+          width: 365px;
+          .OfferTime {
+            padding: 8px 30px;
+            top: 146px;
+            right: -118px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// maefia Query for mobile width 540px
+
+@media screen and (max-width: 540px) {
+  .mainBanner {
+    .logo {
+      margin-top: 60px;
+    }
+    .IAmHome {
+      grid-template-columns: 1fr;
+      grid-row-gap: 20px;
+      .content {
+        .borderHeading {
+          font-size: 30px;
+        }
+      }
+      .formPanel {
+        .formBackColor {
+          width: 308px;
+          .OfferTime {
+            padding: 0px 30px;
+            top: 153px;
+            right: -110px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+@import "../../styles/variable.scss";
+
+.wrapperButton {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0px 0px;
+  border: 1px solid $dark;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 940px;
+  margin: 40px auto;
+
+  button {
+    flex: 1;
+    min-width: max-content;
+  }
+}
+.packages_flex_row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: auto;
+  > div {
+    margin: 10px;
+  }
+}
+
+.buttonHover > p {
+  transition: all 300ms ease-out !important;
+}
+
+.buttonHover:hover {
+  background-color: #1d2228 !important; 
+  color: white !important;
+  transform: scale(1.2) !important;
+  z-index: 2;
+}
+
+.buttonHover:hover > p {
+  // background-color: #1d2228 !important; 
+  color: white !important;
+}
+
+
+.getAQouteBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:30px;
+  button {
+    padding: 8px 80px;
+  }
+}

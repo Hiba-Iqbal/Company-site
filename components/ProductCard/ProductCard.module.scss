@@ -1,0 +1,47 @@
+.imgContainer {
+  height: 190px;
+  width: 100%;
+  max-height: 190px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+  // background: red;
+  &:hover {
+    transform: scale(1.1);
+    z-index: 5
+  }
+  .imgwidth {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    background-color: #072227;
+    // border-radius: 15px;
+  }
+  span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    // border-radius: 15px 15px 0 0;
+    transition: 0.8s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      color: white;
+      font-size: 25px;
+      opacity: 0;
+      transition: 0.8s;
+    }
+    &:hover {
+      background: #00000099;
+      transition: 0.8s;
+      svg {
+        opacity: 1;
+      }
+    }
+  }
+}

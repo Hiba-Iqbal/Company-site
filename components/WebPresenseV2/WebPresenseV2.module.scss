@@ -1,0 +1,38 @@
+.main {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+  .mainContent {
+    background-image: url("./../../assets/images/icons/newtworkBackground.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 30px 0 50px 0;
+    .mainContentHeading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 20px 0;
+    }
+    .mainContentGallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      grid-row-gap: 20px;
+      grid-template-rows: max-content;
+      align-items: self-start;
+      justify-items: center;
+      grid-column-gap: 16px;
+      .modifyCard {
+        width: 240px;
+        height: 190px;
+        box-shadow: 3px 2px 18px 3px #80808047;
+        color: black;
+        max-width: unset;
+        margin: 0px;
+      }
+    }
+  }
+}

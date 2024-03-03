@@ -1,0 +1,101 @@
+@import "./../../styles/variable.scss";
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainContentHeading {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  .textShowClr {
+    color: $redish;
+  }
+}
+.priceBoxWrapper {
+  display: grid;
+  // align-items: center;
+  // justify-content: space-between;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10px;
+  // row-gap: 20px;
+  // flex-wrap: wrap;
+  margin-top: 30px;
+  @media screen and (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
+  .checkboxItem {
+    min-width: 340px;
+  }
+}
+
+.totalPriceWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  .priceItems {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      height: 140px;
+      margin: 0 60px;
+    }
+  }
+  // .pricesFlagsRight {
+  //   margin-right: 40px;
+  //   @media screen and (max-width: 800px) {
+  //     margin-right: 0px;
+  //   }
+  // }
+  .pricesFlagsLeft {
+    transform: translateX(16px);
+  }
+  .totalPriceVal {
+    margin: 20px 40px 40px 40px;
+    .dollars {
+      font-size: 26px;
+      font-weight: 600;
+    }
+    .totalPrice {
+      color: $redish;
+      font-size: 52px;
+      font-weight: bold;
+    }
+    .liveChatBtnWrapper {
+      .liveChatBtn {
+        border-radius: 8px;
+        padding: 16px 40px;
+        color: white;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .mainContentHeading {
+    width: 100%;
+  }
+  .priceBoxWrapper {
+    .checkboxItem {
+      min-width: 300px;
+    }
+  }
+  .totalPriceWrapper {
+    .pricesFlags {
+      img {
+        height: 100px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 380px) {
+  .priceBoxWrapper {
+    .boxWrapper {
+      width: 300px;
+    }
+  }
+}

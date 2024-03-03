@@ -1,0 +1,15 @@
+.package_list {
+  margin-bottom: 50px;
+  p {
+    margin-bottom: 0 !important;
+  }
+  .list_items {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+
+    .check_icon {
+      margin: 0 10px 0 0;
+    }
+  }
+}

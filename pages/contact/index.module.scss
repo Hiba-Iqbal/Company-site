@@ -1,0 +1,12 @@
+// .contact {
+//   display: grid;
+//   grid-template-columns: repeat(3, 1fr);
+//   grid-gap: 10px;
+// }
+
+.contactItems {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: -10px;
+}

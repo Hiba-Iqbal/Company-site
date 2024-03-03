@@ -1,0 +1,15 @@
+@import "./../../styles/variable.scss";
+.Project {
+  background-color: $bg-color-light_blue;
+  padding: 0px 60px;
+}
+
+.col_1 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 50px 30px;
+
+  img {
+    grid-row: 1/-1;
+  }
+}

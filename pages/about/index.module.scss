@@ -1,0 +1,60 @@
+.imageClass {
+  width: 440px !important;
+}
+.marketingSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  grid-gap: 10px;
+  align-items: center;
+  justify-items: center;
+}
+.gridGapClass {
+  grid-column-gap: 0px !important;
+  .contentSection {
+    padding: 0px 100px 0 40px;
+  }
+}
+
+.testimonial_wrapper {
+  position: relative;
+
+  .quotesRight {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    width: 60px;
+    z-index: 10;
+  }
+  .quotesLeft {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    width: 60px;
+    z-index: 101;
+  }
+}
+
+// Media Query fro mobile 540px
+
+@media screen and (max-width: 540px) {
+  .imageClass {
+    width: 100% !important;
+  }
+  .paragraph {
+    width: 75%;
+  }
+  .gridGapClass {
+    grid-row-gap: 0px !important;
+    .contentSection {
+      padding: 30px 20px 30px 20px;
+    }
+  }
+  .testimonial_wrapper {
+    .quotesLeft {
+      display: none;
+    }
+    .quotesRight {
+      display: none;
+    }
+  }
+}

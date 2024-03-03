@@ -1,0 +1,38 @@
+.portFolios {
+  background-repeat: no-repeat;
+  background-size: cover;
+  // height: calc(100vh - 109px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  .alignCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.alignCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.childButtons {
+  margin-top: 30px;
+}
+
+.cover {
+  height: calc(100vh - 109px);
+@media screen and (max-width: 991px) { 
+    height: 100%;
+
+}
+
+}
+
+// @media screen and (max-width: 991px) {
+//   .portFolios {
+//     height: 100%;
+//   }
+// }

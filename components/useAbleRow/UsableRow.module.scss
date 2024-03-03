@@ -1,0 +1,35 @@
+.iAmUseableRow {
+  display: grid;
+  align-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 20px;
+  .wrapperImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 100%;
+      max-width: 500px;
+    }
+  }
+  .content {
+    // padding: 20px;
+  }
+}
+
+// Medai Query from mobile width 991px
+@media screen and (max-width:991px) {
+  .iAmUseableRow {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 20px;
+  }
+}
+
+// Medai Query from mobile width 540px
+@media screen and (max-width:540px) {
+  .iAmUseableRow {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 20px;
+  }
+}

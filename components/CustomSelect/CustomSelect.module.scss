@@ -1,0 +1,108 @@
+@import "../../styles/variable.scss";
+
+.custom_select_wrapper {
+  .select_area {
+    margin-top: 4px;
+    position: relative;
+    min-width: 240px;
+    height: 52px;
+    background-color: #fff;
+    .place_holder {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+      font-size: 14px;
+      user-select: none;
+      color: $dark;
+
+    }
+
+    input {
+      box-shadow: 0 0 10px #d4d4d4;
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 100;
+      background-color: transparent;
+      border-radius: 6px;
+      padding: 0 10px;
+      outline:none;
+      caret-color: transparent;
+      font-size: 14px;
+      cursor: pointer;
+      padding-right: 40px !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+      // border: 1px solid lightgrey;
+    }
+
+    svg {
+      font-size: 30px;
+      position: absolute;
+      right: 8px;
+      top: 10px;
+      z-index: 99;
+      cursor: pointer;
+    }
+    .select_selection {
+      position: absolute;
+      width: 100%;
+      top: 55px;
+      left: 0;
+      z-index: 102;
+      background: #fff;
+      border-radius: 0 0 6px 6px;
+      overflow: hidden;
+      // box-shadow: 0 0 10px 2px #d4d4d4;
+      animation: move 0.2s both;
+      max-height: 250px;
+      overflow-y: auto;
+      border:solid 1px #eee;
+    
+      p {
+        padding: 12px 10px ;
+        margin-bottom: 0;
+        font-size: 14px;
+        cursor: pointer;
+        transition: .3s;
+        &:hover {
+          background-color: $dark;
+          color: $clr-white;
+        }
+      }
+
+    
+    }
+  }
+
+  &.light {
+    label {
+      color: $clr-white;
+    }
+    .select_area {
+    background: $clr-white;
+    border-radius: 6px;
+    input {
+      box-shadow: unset;
+    }
+  }
+    
+  } 
+}
+
+@keyframes move {
+  from {
+    transform: translateY(-20px);
+    opacity:0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity:1;
+  }
+}

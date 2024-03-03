@@ -1,0 +1,27 @@
+
+
+  .term_flex_section {
+    display:flex;
+    align-items: center;
+
+    p {
+      margin: 0;
+      &:last-child {
+        margin-left: 5px;
+        font-size: 16px;
+        position: relative;
+        top: 2px;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+
+
+@media screen and (max-width: 991px) {
+  .IAmTermsAndCondition {
+    padding: 0px 20px;
+
+    
+  }
+}

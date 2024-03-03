@@ -1,0 +1,205 @@
+@import "./../../styles/variable.scss";
+
+.contactform {
+  background-image: url("../../assets/images/backgroundImage.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .form_row {
+    display: flex;
+    flex-wrap: wrap;
+    .flex_cols {
+      flex: 1;
+      margin: 10px;
+      min-width: 250px;
+      position: relative;
+      .checkContainer {
+        display: flex;
+        align-items: flex-start;
+        .callnowUnderlined {
+          a{
+            margin-left: 6px;
+            color: black;
+            text-decoration: underline;
+            font-size: 14px;
+          }
+        }
+      }
+      textarea {
+        width: 100%;
+        resize: none;
+        padding: 10px;
+        min-height: 300px;
+        box-shadow: 0 0 10px #d4d4d4;
+        border-radius: 6px;
+
+        &:focus {
+          outline: $light-gray;
+        }
+        &::placeholder {
+          color: $dark;
+        }
+      }
+
+      input[radio] {
+        color: #fff;
+      }
+
+      input {
+        width: 100%;
+        padding: 18px 10px;
+        border-radius: 6px;
+        font-size: 14px;
+        box-shadow: 0 0 10px #d4d4d4;
+
+        &:focus {
+          outline: $light-gray;
+        }
+        &::placeholder {
+          color: $dark;
+          font-size: 14px;
+        }
+      }
+
+      &.button_styles {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      &.checkbox_typed {
+        display: flex;
+        position: relative;
+        align-items: center;
+
+        input[type="checkbox"] {
+          width: max-content;
+          margin-right: 10px;
+          transform: scale(1.5);
+        }
+        label {
+          color: #fff;
+        }
+      }
+
+      &.check_styled {
+        &:first-child {
+          // margin-top: 10px;
+        }
+        margin: 0 0 0 10px;
+      }
+
+      button {
+        margin-left: auto;
+      }
+
+      &.policy {
+        display: flex;
+        align-items: flex-start;
+
+        a {
+          margin: 0;
+          font-size: 14px;
+          margin:0 0 0 5px;
+        }
+      }
+    }
+
+    // custom checkbox
+
+    .container {
+      display: block;
+      position: relative;
+      padding-left: 26px;
+      cursor: pointer;
+      width: max-content;
+      font-size: 14px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      margin-bottom: 15px;
+    }
+
+    .container input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      inset: 0;
+    }
+
+    .checkmark {
+      position: absolute;
+      top: -3px;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      background-color: #eee;
+      border: solid 1px #d4d4d4;
+      // box-shadow: 0 0 0 2px #d4d4d4;
+      border-radius: 4px;
+      transition: 0.5s;
+    }
+
+    .container:hover input ~ .checkmark {
+      background-color: $light-gray;
+    }
+
+    .container input:checked ~ .checkmark {
+      background-color: $dark;
+      overflow: hidden;
+    }
+
+    .container .checkmark {
+      &:before {
+        position: absolute;
+        left: -2px;
+        top: 6px;
+        height: 8px;
+        width: 2px;
+        background-color: transparent;
+        content: "";
+        transform: translateX(10px) rotate(-45deg);
+        transform-origin: left bottom;
+      }
+
+      &:after {
+        position: absolute;
+        top: 12px;
+        left: -2px;
+        bottom: 2px;
+        height: 2px;
+        content: "";
+        transform: translateX(10px) rotate(-45deg);
+        transform-origin: left bottom;
+      }
+    }
+    .checkmark:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      transition: 0.2s;
+    }
+    .checkmark:before {
+      content: "";
+      position: absolute;
+      background-color: transparent;
+      transition: 0.1s;
+    }
+
+    .container input:checked ~ .checkmark:after {
+      display: block;
+      background-color: #fff;
+      width: 12px;
+      border-radius: 10px;
+    }
+    .container input:checked ~ .checkmark::before {
+      background-color: #fff;
+      border-radius: 10px;
+    }
+  }
+
+  .callnow {
+    text-decoration: none;
+    color: $dark;
+  }
+}

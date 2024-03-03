@@ -1,0 +1,19 @@
+.get_a_quot_modal {
+    
+    // overflow-y: auto;
+    width: 100vw;
+   
+    max-width: 680px;
+    max-height: 840px;
+
+}
+
+
+@media screen and (max-width:540px) {
+    
+    .get_a_quot_modal {
+        max-height: 600px;
+        overflow-y: auto;
+    
+    }
+}

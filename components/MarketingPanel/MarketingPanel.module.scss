@@ -1,0 +1,58 @@
+@import "../../styles/variable";
+.marketingPanel {
+  background: $clr-theme;
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+    text-align: center;
+    width: 75%;
+    margin: auto;
+  }
+  .marketingButton {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 0px;
+  }
+}
+
+// Medai Query for mobile width 540px
+
+@media screen and (max-width: 540px) {
+  .marketingPanel {
+    span {
+      width: 100%;
+    }
+    .marketingButton {
+      width: unset;
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+      margin: 20px 0px 0 0;
+      button {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .marketingPanel {
+    span {
+      width: 100%;
+    }
+    .marketingButton {
+      width: unset;
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+      margin: 20px 0px 0 0;
+      button {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

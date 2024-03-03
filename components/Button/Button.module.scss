@@ -1,0 +1,36 @@
+@import "../../styles/variable.scss";
+.buttonContainer {
+  outline: none;
+  background: #272a3d;
+  padding: 8px 24px;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+  border-radius: 10px;
+  border: solid 1px transparent;
+
+  p {
+    margin: 0;
+  }
+}
+
+.hover_light {
+  &:hover {
+    background-color: $dark !important;
+    p {
+      color: $clr_white !important;
+    }
+  }
+}
+.hover {
+  &:hover {
+    background-color: $clr_white !important;
+    border: solid 1px $dark !important;
+    p {
+      color: $dark !important;
+    }
+  }
+}
+
+.buttonContainer:active {
+  transform: scale(0.9);
+}

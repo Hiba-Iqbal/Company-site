@@ -1,0 +1,95 @@
+@import "./../../styles/variable.scss";
+
+
+// custom checkbox
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 26px;
+  cursor: pointer;
+  width: max-content;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-bottom: 15px;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  inset: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border: solid 1px #d4d4d4;
+  // box-shadow: 0 0 0 2px #d4d4d4;
+  border-radius: 4px;
+  transition: 0.5s;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: $light-gray;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: $dark;
+  overflow: hidden;
+}
+
+.container .checkmark {
+  &:before {
+    position: absolute;
+    left: -2px;
+    top: 6px;
+    height: 8px;
+    width: 2px;
+    background-color: transparent;
+    content: "";
+    transform: translateX(10px) rotate(-45deg);
+    transform-origin: left bottom;
+  }
+
+  &:after {
+    position: absolute;
+    top: 12px;
+    left: -2px;
+    bottom: 2px;
+    height: 2px;
+    content: "";
+    transform: translateX(10px) rotate(-45deg);
+    transform-origin: left bottom;
+  }
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  transition: 0.2s;
+}
+.checkmark:before {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  transition: 0.1s;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+  background-color: #fff;
+  width: 12px;
+  border-radius: 10px;
+}
+.container input:checked ~ .checkmark::before {
+  background-color: #fff;
+  border-radius: 10px;
+}

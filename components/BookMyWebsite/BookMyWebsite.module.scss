@@ -1,0 +1,71 @@
+.bookMyWebsite {
+  background: url(../../assets/images/bgImg.jpeg);
+  .bookMyWebsiteGrid {
+    padding: 2px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    align-items: center;
+  }
+  .content {
+    grid-column: span 9;
+  }
+  .contentButtton {
+    grid-column: span 3;
+    button:first-child {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+// @medai Query for mobile width 991px
+@media screen and (max-width: 991px) {
+  .bookMyWebsite {
+    .bookMyWebsiteGrid {
+      padding: 2px;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-row-gap: 10px;
+      .content {
+        text-align: center;
+      }
+      .contentButtton {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        button:first-child {
+          margin-right: 10px;
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+}
+
+// Medai Query For mobile width 540px
+
+@media screen and (max-width: 540px) {
+  .bookMyWebsite {
+    .bookMyWebsiteGrid {
+      padding: 2px;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-row-gap: 10px;
+      .content {
+        text-align: center;
+      }
+      .contentButtton {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        button:first-child {
+          margin-bottom: 15px;
+          margin-right: 0px;
+        }
+      }
+    }
+  }
+}

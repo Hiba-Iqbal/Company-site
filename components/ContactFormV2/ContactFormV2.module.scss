@@ -1,0 +1,52 @@
+@import "./../../styles/variable.scss";
+
+.contactMapMain {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+  .contactFormArea {
+    padding: 2em;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #d4d4d4;
+  }
+  .mapDisplayArea {
+    padding: 0em;
+  }
+  .content {
+    padding: 2.5em 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+      img {
+        width: 20px;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  .callnow {
+    text-decoration: none;
+    color: $dark;
+  }
+
+  .callnowUnderlined {
+    color: $dark;
+    text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .contactMapMain {
+    display: grid;
+    grid-template-columns: 1fr;
+    .contactFormArea {
+      padding: 0em;
+    }
+  }
+}

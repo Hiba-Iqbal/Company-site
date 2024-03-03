@@ -1,0 +1,56 @@
+.image_viewer_wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+
+    .tools_wrapper {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        display: flex;
+        padding: 10px 40px;
+
+       > svg{
+            
+        }
+
+        .tools {
+            margin-left: auto;
+
+            svg {
+                margin: 0 8px;
+            }
+        }
+    }
+
+    .image_view {
+
+        max-height: calc(100vh - 100px);
+        width: 100%;
+        
+        overflow-y: auto;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+
+        img {
+            width: 100%;
+            height: 100%;
+            max-width: 220px;
+            transition: .3s;
+            user-select: none;
+            
+        }
+    }
+
+}

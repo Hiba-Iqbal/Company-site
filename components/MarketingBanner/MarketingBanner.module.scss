@@ -1,0 +1,130 @@
+.bgBanner {
+  background: url(../../assets/images/sample/bgBanner.webp);
+  background-size: 100% 100%;
+  margin-top: 100px;
+  .mokupGrid {
+    display: grid;
+    grid-template-columns: 35fr 65fr;
+    align-items: center;
+    .mokupBox {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      animation: movement infinite 15s;
+
+      .laptop_wrapper {
+       
+        position: absolute;
+        top: -70px;
+
+      }
+      
+    }
+  }
+}
+.chatGrid {
+  display: grid;
+  grid-template-columns: 35fr 65fr;
+  .chatLine {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .support {
+      display: flex;
+      align-items: center;
+      img {
+        height: 40px;
+        width: 40px;
+      }
+    }
+    .chatIcon {
+      margin-left: 8px;
+    }
+    .callNow {
+      display: flex;
+      align-items: center;
+      margin-left: 30px;
+      img {
+        height: 40px;
+        width: 40px;
+        margin-left: 8px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .bgBanner {
+    .mokupGrid {
+      grid-template-columns: 100fr;
+      .mokupBox {
+        text-align: center;
+      }
+      img {
+        position: unset !important;
+      }
+    }
+  }
+  .chatGrid {
+    grid-template-columns: 0fr 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bgBanner {
+    background-size: unset;
+    .mokupGrid {
+      .mokupBox {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .chatGrid {
+    .chatLine {
+      flex-direction: column;
+      .support {
+        margin-bottom: 20px;
+        img {
+          width: 35px;
+        }
+        .chatIcon {
+          p {
+            font-size: 14px !important;
+          }
+        }
+      }
+      .callNow {
+        margin-top: 20px;
+        margin-left: 0px;
+        img {
+          width: 18px;
+        }
+        span {
+          p {
+            font-size: 14px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes movement {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-15px);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+  75% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

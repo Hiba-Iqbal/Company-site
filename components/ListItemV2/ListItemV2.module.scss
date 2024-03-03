@@ -1,0 +1,15 @@
+.listItem {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  font-size: 14px !important;
+  word-wrap: break-word;
+  word-break: break-all;
+  img {
+    margin-right: 8px;
+  }
+  span {
+    font-size: 16px;
+  }
+}

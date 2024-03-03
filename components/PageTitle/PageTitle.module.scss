@@ -1,0 +1,27 @@
+@import "../../styles/variable.scss";
+.page_title_wrapper {
+  background: rgba($color: $dark, $alpha: 0.4);
+  background-blend-mode: overlay;
+}
+
+.dark {
+  background: url("../../assets/images/sample/dark-gray-wooden.png");
+  background-size: cover;
+}
+
+.bg_image {
+  background-image: url("../../assets/images/sample/page-title-bg.png");
+  background-size: cover;
+}
+.bgPayment {
+  background-image: url("../../assets/images/sample/headerImage.webp") !important;
+  background-size: cover;
+}
+
+@media screen and (max-width: 540px) {
+  .page_title_wrapper {
+    h1 {
+      font-size: 30px !important;
+    }
+  }
+}

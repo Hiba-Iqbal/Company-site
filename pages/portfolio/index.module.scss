@@ -1,0 +1,17 @@
+.widthUnset {
+  width: unset !important;
+}
+.heightWrapper {
+  height: 100% !important;
+}
+.childButtons {
+  margin-top: 50px;
+}
+@media screen and (max-width: 540px) {
+  .childButtons {
+    margin-top: 20px;
+  }
+  .widthUnset {
+    width: 100% !important;
+  }
+}

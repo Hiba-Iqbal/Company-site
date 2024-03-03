@@ -1,0 +1,144 @@
+@import "../../styles/variable";
+// .main {
+//   text-align: center;
+//   background: $clr-theme;
+//   // padding: 20px 10em;
+//   .projectCard {
+//     display: grid;
+//     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+//     grid-gap: 15px;
+//     grid-template-rows: auto;
+//   }
+//   .wrapperButton {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-evenly;
+//     padding: 25px 0px;
+//   }
+// }
+
+// // Media Query for IPAD width 991px
+
+// @media screen and (max-width: 991px) {
+//   .main {
+//     padding: 0px;
+//     .projectCard {
+//       grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+//       grid-gap: 10px;
+//     }
+//     .wrapperButton {
+//       flex-wrap: wrap;
+//       button {
+//         margin-bottom: 15px;
+//       }
+//     }
+//   }
+// }
+
+// // Media Query from Mobile width 540px
+
+// @media screen and(max-width:540px) {
+//   .main {
+//     padding: 0px;
+//     .projectCard {
+//       grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+//       grid-gap: 10px;
+//     }
+//     .wrapperButton {
+//       padding: 20px 0px 0 0;
+//       flex-wrap: wrap;
+//       button {
+//         margin-bottom: 15px;
+//       }
+//     }
+//   }
+// }
+
+@import "../../styles/variable";
+
+
+
+.main {
+  text-align: center;
+  // background: #272a3d;
+  // padding: 20px 10em;
+  .projectCard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    grid-template-rows: auto;
+  }
+  .headingWidth {
+    width: 60%;
+    margin: auto;
+  }
+  .wrapperButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0px 0px;
+    border-radius: 6px;
+    width: fit-content;
+    margin: 0px auto;
+    margin-bottom: 40px;
+  }
+}
+
+.buttonHover > p {
+  transition: all 300ms ease-out !important;
+}
+
+.buttonHover:hover {
+  background-color: #072227 !important; 
+  color: white !important;
+  transform: scale(1.3) !important;
+  z-index: 2;
+}
+
+.buttonHover:hover > p {
+  // background-color: #787A8A !important; 
+  color: white !important;
+}
+
+// Media Query for IPAD width 991px
+
+@media screen and (max-width: 991px) {
+  .main {
+    padding: 0px;
+    .projectCard {
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      grid-gap: 10px;
+    }
+    .headingWidth {
+      width: 100%;
+    }
+    .wrapperButton {
+      flex-wrap: wrap;
+      button {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+// Media Query from Mobile width 540px
+
+@media screen and (max-width:540px) {
+  .main {
+    padding: 0px;
+    .projectCard {
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      grid-gap: 10px;
+    }
+    .headingWidth {
+      width: 100%;
+    }
+    .wrapperButton {
+      padding: 20px 0px 0 0;
+      flex-wrap: wrap;
+      button {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

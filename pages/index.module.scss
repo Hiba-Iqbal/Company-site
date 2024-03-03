@@ -1,0 +1,84 @@
+.projects {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.marketingSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  grid-gap: 10px;
+  align-items: center;
+  justify-items: center;
+}
+.imageClass {
+  width: 440px !important;
+}
+
+.paragraph {
+  width: 75%;
+  margin: auto;
+}
+.statisticsMain {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.combo_wrapper {
+  background-image: url("../assets/images/sample/combo-left.png");
+  background-size: cover;
+  background-position: 0 -100px;
+}
+
+.testimonial_wrapper {
+  position: relative;
+
+  .quotesRight {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    width: 60px;
+    z-index: 10;
+  }
+  .quotesLeft {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    width: 60px;
+    z-index: 101;
+  }
+}
+
+// Media Query fro mobile 540px
+
+@media screen and (max-width: 540px) {
+  .imageClass {
+    width: 100% !important;
+  }
+  .paragraph {
+    width: 75%;
+  }
+
+  .statisticsMain {
+    justify-content: center;
+  }
+
+  .testimonial_wrapper {
+    .quotesLeft {
+      width: 30px;
+      right: 5px;
+      display:none;
+    }
+    .quotesRight {
+      width: 30px;
+      left: 5px;
+      display:none;
+    }
+  }
+}
+@media screen and (min-width: 541px) and (max-width: 991px) {
+  .statisticsMain {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,33 @@
+@import "../../styles/variable.scss";
+
+.option_modal_wrapper {
+  background-color: $clr-white;
+  width: 100vw;
+  margin: 0 10px;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+
+  .radio_group {
+    display: flex;
+    align-items: center;
+    margin: 0 0 10px 0;
+
+    input[type="radio"] {
+      margin: 0 10px 0 0;
+    }
+    label {
+      font-size: 16px;
+    }
+  }
+  .submit_options {
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      &:first-child {
+        margin-right: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import "./../../styles/variable.scss";
+
+.blog_wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px;
+  // margin: 0 auto;
+  place-items: center;
+  margin-top: 30px;
+}
+.searchTile {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  input {
+    width: 100%;
+    min-height: 52px;
+    box-shadow: 0 0 10px #d4d4d4;
+    max-width: 400px;
+    padding: 10px;
+    margin: 0 0 20px 0;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+    // border: solid 2px transparent;
+    &:focus {
+      box-shadow: 0 0 1px 3px rgba(0, 0, 0, 0.411);
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .searchTile {
+    .searchSelect {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.main {
+  margin-top: 40px;
+  position: relative;
+  height: 60vh;
+  .paraHeading {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+  }
+  .banner_video {
+    width: 100%;
+    height: calc(100% - 135px);
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+  }
+  .paraContent {
+    // display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 991px) {
+  .main {
+    height: 100%;
+    .banner_video {
+      position: unset;
+    }
+    .paraContent {
+      .banner_video {
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .main {
+    height: 100%;
+    .paraHeading {
+      width: 100%;
+    }
+    .banner_video {
+      position: unset;
+    }
+  }
+}
